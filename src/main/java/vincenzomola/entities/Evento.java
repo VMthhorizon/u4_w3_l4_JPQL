@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "event_type")
 @Table(name = "events")
 public abstract class Evento {
     @Id
